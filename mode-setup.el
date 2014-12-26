@@ -7,6 +7,8 @@
 
 ;; erc
 (setq erc-track-enable-keybindings nil)
+(add-hook 'erc-insert-post-hook 'erc-save-buffer-in-logs)
+(setq erc-save-buffer-on-part t)
 
 ;; overwrite-mode
 (fmakunbound 'overwrite-mode)
