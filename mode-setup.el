@@ -161,6 +161,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (setq tags-revert-without-query t)
 
 ;; misc config
+(fmakunbound 'suspend-frame)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq apropos-do-all t
       sentence-end-double-space nil
