@@ -105,8 +105,9 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (defun govet-before-save ()
   "Add this to .emacs to run gofmt on the current buffer when saving:
  (add-hook 'before-save-hook 'govet-before-save)."
-  (interactive)
-  (when (eq major-mode 'go-mode) (govet)))
+  ;; (interactive)
+  ;; (when (eq major-mode 'go-mode) (govet)))
+  nil)
 
 (defun govet ()
   (interactive)
