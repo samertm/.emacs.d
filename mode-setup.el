@@ -71,7 +71,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 ;; ag
 (setq ag-reuse-buffers t)
-(setq ag-ignore-list '("Godeps" "assets" "node_modules" "bower_components"))
+(setq ag-ignore-list '("Godeps" "assets" "node_modules" "bower_components" "testdata"))
 
 ;; scroll
 (setq scroll-preserve-screen-position t)

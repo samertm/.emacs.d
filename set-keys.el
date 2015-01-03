@@ -9,6 +9,10 @@
 (global-set-key (kbd "C-^") 'samer-top-join-line)
 (global-set-key (kbd "C-c b") 'samer-generate-blog)
 
+(global-set-key (kbd "C-c o") 'mu4e)
+
+(global-set-key (kbd "C-c C-M-x") 'edebug-defun)
+
 (global-set-key (kbd "C-c u") 'samer-subword-mode-on)
 (global-set-key (kbd "C-c i") 'samer-superword-mode-on)
 
