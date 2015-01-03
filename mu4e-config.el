@@ -69,6 +69,5 @@ echo area, don't show anything."
   ;;     smtpmail-smtp-service 587)
 
   ;; don't keep message buffers around
-  (setq message-kill-buffer-on-exit t)
-  (setq mu4e-use-fancy-chars t)
-)
+  (setq message-kill-buffer-on-exit t
+        mu4e-use-fancy-chars t))
