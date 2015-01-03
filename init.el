@@ -19,7 +19,7 @@
 (load "~/.emacs.d/package-setup" nil t)
 (load "~/.emacs.d/custom-functions" nil t)
 (load "~/.emacs.d/mode-setup" nil t)
-(load "~/.emacs.d/mu4e-config" nil t) ;; mu4e is optional
+(load "~/.emacs.d/mu4e-config" nil t)
 (load "~/.emacs.d/set-keys" nil t)
 (load "~/.emacs.d/hooks" nil t)
 
