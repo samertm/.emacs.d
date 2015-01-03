@@ -1,16 +1,7 @@
 ;; swiped from http://www.djcbsoftware.nl/code/mu/mu4e/Gmail-configuration.html
 (when (require 'mu4e nil t) ;; mu4e is optional
 
-  ;; patch start
-  (setq mu4e-silence-message t)
-  (defun mu4e-message (frm &rest args)
-    "Like `message', but prefixed with mu4e.
-If we're waiting for user-input or if there's some message in the
-echo area, don't show anything."
-    (unless (or (active-minibuffer-window)
-                mu4e-silence-message)
-      (message "%s" (apply 'mu4e-format frm args))))
-  ;; patch end
+  (setq mu4e-hide-index-messages t)
 
   ;; default
   ;; (setq mu4e-maildir "~/Maildir")
