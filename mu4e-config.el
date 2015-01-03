@@ -8,7 +8,7 @@
 If we're waiting for user-input or if there's some message in the
 echo area, don't show anything."
     (unless (or (active-minibuffer-window)
-                (not mu4e-silence-message))
+                mu4e-silence-message)
       (message "%s" (apply 'mu4e-format frm args))))
   ;; patch end
 
