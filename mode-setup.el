@@ -101,8 +101,20 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (require 'popwin)
 (popwin-mode 1)
 
+;; go-mode.el patch start
+(defun govet-before-save ()
+  "Add this to .emacs to run gofmt on the current buffer when saving:
+ (add-hook 'before-save-hook 'govet-before-save)."
+  (interactive)
+  (when (eq major-mode 'go-mode) (govet)))
+
+(defun govet ()
+  (interactive)
+  (compile (concat "go vet " (buffer-file-name))))
+;; go-mode.el patch end
 ;; go-mode
 (setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'govet-before-save)
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-to-list 'load-path (concat (getenv "GOPATH") "/src/github.com/dougm/goflymake"))
 
