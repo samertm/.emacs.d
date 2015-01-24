@@ -9,6 +9,14 @@
 (global-set-key (kbd "C-^") 'samer-top-join-line)
 (global-set-key (kbd "C-c b") 'samer-generate-blog)
 
+(global-set-key (kbd "C-x C-1") 'delete-other-windows)
+(global-set-key (kbd "C-x C-2") 'split-window-below)
+(global-set-key (kbd "C-x C-3") 'split-window-right)
+(global-set-key (kbd "C-x C-0") 'delete-window)
+
+(define-key god-local-mode-map (kbd "i") 'god-local-mode)
+(global-set-key (kbd "<insert>") 'god-local-mode)
+
 (global-set-key (kbd "C-c o") 'mu4e)
 
 (global-set-key (kbd "C-c C-M-x") 'edebug-defun)
