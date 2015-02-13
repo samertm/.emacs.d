@@ -17,7 +17,7 @@
 ;; (add-hook 'god-mode-disabled-hook 'my-update-cursor)
 
 ;; eshell
-(add-to-list 'god-exempt-major-modes 'eshell-mode)
+;; (add-to-list 'god-exempt-major-modes 'eshell-mode)
 
 
 ;; erc

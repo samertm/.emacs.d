@@ -28,22 +28,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(erc-modules
+ '(package-selected-packages
    (quote
-    (completion netsplit fill button match track readonly networks ring autojoin noncommands irccontrols move-to-prompt stamp menu list))))
+    (deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(rainbow-delimiters-depth-1-face ((t (:foreground "black"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "dark violet"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "blue"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "blue4"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "dark green"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "dark orange"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "magenta"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "sienna"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "dark red"))))
- '(rainbow-delimiters-unmatched-face ((t (:foreground "red")))))
+ )
 (put 'upcase-region 'disabled nil)

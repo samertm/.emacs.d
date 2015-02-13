@@ -36,6 +36,22 @@
                  ace-jump-mode
                  deft
                  ))
+
+;; hotfix
+
+(defun package-read-all-archive-contents ()
+  "Re-read `archive-contents', if it exists.
+If successful, set `package-archive-contents'."
+  (setq package-archive-contents nil)
+  (dolist (archive package-archives)
+    (package-read-archive-contents (car archive)))
+  ;; Build compat table.
+  (if package--initialized
+      (progn
+	(setq package--compatibility-table (make-hash-table :test 'eq))
+	(package--mapc #'package--add-to-compatibility-table))))
+
+
 (package-initialize t) ; read packages without loading
 (samer-get-packages packages)
 (package-initialize)
