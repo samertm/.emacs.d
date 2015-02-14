@@ -14,8 +14,9 @@
 (global-set-key (kbd "C-x C-3") 'split-window-right)
 (global-set-key (kbd "C-x C-0") 'delete-window)
 
-(define-key god-local-mode-map (kbd "i") 'god-local-mode)
-(global-set-key (kbd "<insert>") 'god-local-mode)
+;; (define-key god-local-mode-map (kbd "i") 'god-local-mode)
+;; (global-set-key (kbd "<insert>") 'god-local-mode)
+;; (global-set-key (kbd "<escape>") 'god-local-mode)
 
 (global-set-key (kbd "C-c o") 'mu4e)
 

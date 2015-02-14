@@ -92,8 +92,8 @@ user."
   "Open up processes needed for work."
   (interactive)
   (process-send-string (shell "*shell*<serve-dev>") "cd $GOPATH/src/sourcegraph.com/sourcegraph/sourcegraph && git pull && make serve-dev\n")
-  (process-send-string (shell "*shell*<gulp>") "cd $GOPATH/src/sourcegraph.com/sourcegraph/sourcegraph/app && gulp\n")
-  (process-send-string (shell "*shell*<vcsstore") "cd $GOPATH/src/github.com/sourcegraph/vcsstore/ && git pull && docker run -e GOMAXPROCS=8 -p 9090:80 -v /tmp/vcsstore vcsstore\n"))
+  (process-send-string (shell "*shell*<gulp>") "cd $GOPATH/src/sourcegraph.com/sourcegraph/sourcegraph/app && gulp\n"))
+
 
 (defun samer-subword-mode-on ()
   (interactive)
