@@ -2,11 +2,12 @@
 
 ;; suppress gui & startup
 (setq inhibit-startup-screen t)
-(if window-system
-    (progn
-      (tool-bar-mode -1)
-      (menu-bar-mode -1)
-      (scroll-bar-mode -1)))
+(if (functionp 'tool-bar-mode)
+    (tool-bar-mode -1))
+(if (functionp 'menu-bar-mode)
+    (menu-bar-mode -1))
+(if (functionp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
 (column-number-mode t)
 
 ;; for chromebook
