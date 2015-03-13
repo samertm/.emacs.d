@@ -3,7 +3,8 @@
   (setq-default indent-tabs-mode nil)
   ;(sourcegraph-mode 1)
   (local-set-key (kbd "C-a") 'back-to-indentation)
-  (local-set-key (kbd "M-m") 'move-beginning-of-line))
+  (local-set-key (kbd "M-m") 'move-beginning-of-line)
+  (setq show-trailing-whitespace t))
   
 
 (defun my-js-mode-hook ()

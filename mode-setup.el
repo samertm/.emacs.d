@@ -5,6 +5,11 @@
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
+;; shell-mode
+(add-to-list 'display-buffer-alist '(".*shell.*" . ((display-buffer-same-window) . nil)))
+
+;; whitespace
+(setq-default indicate-empty-lines t)
 
 ;; god-mode
 ;; (require 'god-mode)
