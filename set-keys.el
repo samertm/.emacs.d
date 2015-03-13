@@ -1,3 +1,8 @@
+;; unset keys
+;; unset news keys (guilty as charged, I am the fat-fingered man.)
+(global-unset-key (kbd "C-h C-n"))
+(global-unset-key (kbd "C-h n"))
+
 ;; set keys
 (global-set-key (kbd "C-c C-a") 'samer-mark-line-to-indentation)
 (global-set-key (kbd "C-c M-m") 'samer-mark-whole-line)
