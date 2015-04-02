@@ -14,9 +14,6 @@
 (if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
     (set-face-attribute 'default nil :height 130))
 
-(setq remember-notes-initial-major-mode 'text-mode)
-(setq initial-buffer-choice 'remember-notes)
-
 (let ((default-directory "/home/samer/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 
@@ -34,7 +31,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ace-window debbugs vala-mode cider clojure-mode sourcegraph go-stacktracer markdown-mode deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags))))
+    (gh ace-window debbugs vala-mode cider clojure-mode sourcegraph go-stacktracer markdown-mode deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

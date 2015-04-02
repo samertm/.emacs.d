@@ -10,6 +10,12 @@
 
 ;; whitespace
 (setq-default indicate-empty-lines t)
+(set-face-attribute 'trailing-whitespace nil
+                      :foreground 'unspecified
+                      :inverse-video 'unspecified
+                      :slant 'unspecified
+                      :weight 'unspecified
+                      :background "#fff")
 
 ;; god-mode
 ;; (require 'god-mode)
@@ -157,21 +163,41 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 ;; ido-mode, flx-ido
 (require 'flx-ido)
+;; By default, ido does not have flex matching enabled.
 (setq ido-enable-flex-matching t
       ido-everywhere t
+      ;; By default, ido-mode will change your directory if you type
+      ;; the name of a file that doesn't exist. Set
+      ;; ido-auto-merge-work-directories-length to a negative number
+      ;; to disable that behavior.
       ido-auto-merge-work-directories-length -1
+      ;; By default, ido-mode will ask you if you want to create a new
+      ;; buffer when you type the name of a buffer that doesn't exist.
+      ;; Set ido-create-new-buffer to always to always create a new
+      ;; buffer.
       ido-create-new-buffer 'always
+      ;; By default, ido-mode will open a file in the selected window
+      ;; *unless* that file is open in another frame, in which case it
+      ;; will simply raise that frame. Set ido-default-file-method to
+      ;; 'selected-window to *always* open a file in the selected
+      ;; window.
       ido-default-file-method 'selected-window
+      ;; ido-default-buffer-method has the same behavior as
+      ;; ido-default-file-method by default.
       ido-default-buffer-method 'selected-window)
 (ido-mode 1)
-(ido-everywhere 1)
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t)
-(setq ido-use-faces nil) 
+(setq ido-use-faces nil)
 
 ;; org-mode
 (setq org-log-done 'time)
-(setq org-directory "~/org/")
+(setq org-directory "~/org")
+
+;; remember
+(setq remember-data-file (concat org-directory "/notes.org"))
+(setq remember-notes-initial-major-mode 'org-mode)
+(setq initial-buffer-choice 'remember-notes)
 
 ;; show-paren-mode
 (setq show-paren-delay 0)

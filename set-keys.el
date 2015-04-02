@@ -14,6 +14,16 @@
 (global-set-key (kbd "C-^") 'samer-top-join-line)
 (global-set-key (kbd "C-c b") 'samer-generate-blog)
 
+;; Eval keybindings
+(global-set-key (kbd "C-c e b") 'eval-buffer)
+
+(global-set-key (kbd "C-h C-f") 'find-function)
+
+(global-set-key (kbd "C-x o") 'other-window)
+(global-set-key (kbd "C-c o") 'ace-window)
+
+(global-set-key (kbd "C-c c") 'remember)
+
 (global-set-key (kbd "C-x C-1") 'delete-other-windows)
 (global-set-key (kbd "C-x C-2") 'split-window-below)
 (global-set-key (kbd "C-x C-3") 'split-window-right)
@@ -23,7 +33,7 @@
 ;; (global-set-key (kbd "<insert>") 'god-local-mode)
 ;; (global-set-key (kbd "<escape>") 'god-local-mode)
 
-(global-set-key (kbd "C-c o") 'mu4e)
+;; (global-set-key (kbd "C-c o") 'mu4e)
 
 (global-set-key (kbd "C-c C-M-x") 'edebug-defun)
 
@@ -31,10 +41,8 @@
 (global-set-key (kbd "C-c i") 'samer-superword-mode-on)
 
 ;; so fat
-(global-set-key (kbd "C-c C-c C-o") 'other-frame)
-(global-set-key (kbd "C-c C-c o") 'other-frame)
-(global-set-key (kbd "C-c c C-o") 'other-frame)
-(global-set-key (kbd "C-c c o") 'other-frame)
+(global-set-key (kbd "C-c x C-o") 'other-frame)
+(global-set-key (kbd "C-c x o") 'other-frame)
 (global-set-key (kbd "C-x f") 'ido-find-file)
 
 ;; fat-finger
@@ -79,8 +87,8 @@
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-s") 'isearch-forward)
+(global-set-key (kbd "C-r") 'isearch-backward)
 
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'shell-command)
