@@ -1,3 +1,11 @@
+;;; mu4e-config.el --- mu4e config -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; mu4e config, unused.
+
+;;; Code:
+
 ;; swiped from http://www.djcbsoftware.nl/code/mu/mu4e/Gmail-configuration.html
 (when (require 'mu4e nil t) ;; mu4e is optional
 

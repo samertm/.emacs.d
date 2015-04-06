@@ -1,4 +1,12 @@
-;; set up packages
+;;; package-setup.el --- package setup               -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; Set up packages.
+
+;;; Code:
+
+
 (require 'package)
 
 ;; custom package-specific functions
@@ -54,6 +62,10 @@ If successful, set `package-archive-contents'."
               (package--mapc #'package--add-to-compatibility-table))))))
 
 
+;; NOTE: after 25.0 this may not be needed.
 (package-initialize t) ; read packages without loading
 (samer-get-packages packages)
 (package-initialize)
+
+(provide 'package-setup)
+;;; package-setup.el ends here

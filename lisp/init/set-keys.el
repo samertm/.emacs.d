@@ -1,3 +1,11 @@
+;;; set-keys.el --- set keys -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; Set keys.
+
+;;; Code:
+
 ;; unset keys
 ;; unset news keys (guilty as charged, I am the fat-fingered man.)
 (global-unset-key (kbd "C-h C-n"))
@@ -124,3 +132,6 @@
 (global-set-key (kbd "C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "C-<up>") 'enlarge-window)
 (global-set-key (kbd "C-<down>") 'shrink-window-if-larger-than-buffer)
+
+(provide 'set-keys)
+;;; set-keys.el ends here

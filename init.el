@@ -1,4 +1,10 @@
-;; general config
+;;; init.el --- init                                 -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; My init file.
+
+;;; Code:
 
 ;; suppress gui & startup
 (setq inhibit-startup-screen t)
@@ -14,28 +20,22 @@
 (if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
     (set-face-attribute 'default nil :height 130))
 
-(let ((default-directory "/home/samer/.emacs.d/lisp/"))
+;; Add Lisp stuff.
+;; I'm not sure how to do this in a portable way.
+(defvar my-lisp-dir "~/.emacs.d/lisp/"
+  "The directory with all of my custom Lisp files.")
+
+;; Add my-lisp-dir and subdirectories to load-path.
+(add-to-list 'load-path my-lisp-dir)
+(let ((default-directory my-lisp-dir))
   (normal-top-level-add-subdirs-to-load-path))
+(setq custom-file (concat my-lisp-dir "init/custom.el"))
 
-(load "~/.emacs.d/package-setup" nil t)
-(load "~/.emacs.d/custom-functions" nil t)
-(load "~/.emacs.d/mode-setup" nil t)
-(load "~/.emacs.d/mu4e-config" nil t)
-(load "~/.emacs.d/set-keys" nil t)
-(load "~/.emacs.d/hooks" nil t)
+;; Init
+(require 'package-setup)
+(require 'custom-functions)
+(require 'mode-setup)
+;(require 'mu4e-config) disable for now.
+(require 'set-keys)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (gh ace-window debbugs vala-mode cider clojure-mode sourcegraph go-stacktracer markdown-mode deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(put 'upcase-region 'disabled nil)
+;;; init.el ends here
