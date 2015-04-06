@@ -1,4 +1,4 @@
-;;; custom.el --- custom vars -*- lexical-binding: t; -*-
+;;; i-custom.el --- custom vars -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
@@ -22,5 +22,5 @@
  )
 (put 'upcase-region 'disabled nil)
 
-(provide 'init-custom)
-;;; custom.el ends here
+(provide 'i-custom)
+;;; i-custom.el ends here

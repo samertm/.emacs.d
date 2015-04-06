@@ -1,4 +1,4 @@
-;;; custom-functions.el --- custom functions               -*- lexical-binding: t; -*-
+;;; i-utils.el --- my utilities               -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
@@ -118,5 +118,5 @@ user."
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 11 67108911 15 108 111 103 46 80 114 105 110 116 108 110 40 34 25 34 backspace 32 84 73 77 69 34 44 32 116 105 109 101 46 83 105 110 99 101 40 116 41 41 return 116 32 61 32 116 105 109 101 46 78 111 119 40 41 14 1] 0 "%d")) arg)))
 
 
-(provide 'custom-functions)
-;;; custom-functions.el ends here
+(provide 'i-utils)
+;;; i-utils.el ends here

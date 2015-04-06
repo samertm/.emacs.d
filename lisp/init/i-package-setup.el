@@ -1,4 +1,4 @@
-;;; package-setup.el --- package setup               -*- lexical-binding: t; -*-
+;;; i-package-setup.el --- package setup               -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
@@ -67,5 +67,5 @@ If successful, set `package-archive-contents'."
 (samer-get-packages packages)
 (package-initialize)
 
-(provide 'package-setup)
-;;; package-setup.el ends here
+(provide 'i-package-setup)
+;;; i-package-setup.el ends here

@@ -1,8 +1,8 @@
-;;; set-keys.el --- set keys -*- lexical-binding: t; -*-
+;;; i-keys.el --- set key bindings -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
-;; Set keys.
+;; Set key bindings.
 
 ;;; Code:
 
@@ -133,5 +133,5 @@
 (global-set-key (kbd "C-<up>") 'enlarge-window)
 (global-set-key (kbd "C-<down>") 'shrink-window-if-larger-than-buffer)
 
-(provide 'set-keys)
-;;; set-keys.el ends here
+(provide 'i-keys)
+;;; i-keys.el ends here

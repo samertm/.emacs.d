@@ -1,4 +1,4 @@
-;;; mu4e-config.el --- mu4e config -*- lexical-binding: t; -*-
+;;; i-mu4e-config.el --- mu4e config -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
@@ -70,3 +70,6 @@
   ;; don't keep message buffers around
   (setq message-kill-buffer-on-exit t
         mu4e-use-fancy-chars t))
+
+(provide 'i-mu4e-config)
+;;; i-mu4e-config.el ends here

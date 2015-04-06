@@ -1,4 +1,4 @@
-;;; mode-setup.el --- mode setup -*- lexical-binding: t; -*-
+;;; i-mode-config.el --- mode configs -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
@@ -302,5 +302,5 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (add-hook 'javascript-mode-hook 'my-javascript-mode-hook)
 (add-hook 'text-mode-hook 'visual-line-mode)
 
-(provide 'mode-setup)
-;; mode-setup.el ends here
+(provide 'i-mode-config)
+;;; i-mode-config.el ends here
