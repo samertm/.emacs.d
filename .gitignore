@@ -1,1 +1,7 @@
-notes
+# Exclude everything except for init.el, my lisp dir, and all of its
+subdirs (see /lisp/.gitignore).
+
+*
+!/init.el
+!/lisp
+!/lisp/*
