@@ -20,16 +20,20 @@
 (if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
     (set-face-attribute 'default nil :height 130))
 
-;; Add Lisp dir to loadpath..
-(defvar my-lisp-dir "/home/samer/.emacs.d/lisp/" ; TODO: make portable.
+;; Add Lisp dir to loadpath.
+(defvar my-lisp-dir (expand-file-name "lisp" user-emacs-directory)
   "The directory with all of my custom Lisp files.")
 
 (add-to-list 'load-path my-lisp-dir)
 (let ((default-directory my-lisp-dir))
   (normal-top-level-add-subdirs-to-load-path))
-(setq custom-file (concat my-lisp-dir "init/custom.el"))
 
-;; Call my Emacs init functions.
+;; Set custom file.
+(let ((init-dir (expand-file-name "init" my-lisp-dir)))
+  (setq custom-file (expand-file-name "i-custom.el" init-dir)))
+
+;; Call my Emacs init functions. The "i" prefix means both init and
+;; "I" in the Rastafari sense.
 (require 'i-package-setup)
 (require 'i-utils)
 (require 'i-mode-config)
