@@ -22,7 +22,9 @@
 (global-set-key (kbd "C-^") 'samer-top-join-line)
 (global-set-key (kbd "C-c b") 'samer-generate-blog)
 
-;; Eval keybindings
+(global-set-key (kbd "C-c t") 'tasklist-open-tasklist)
+
+;; Eval keybindings (TODO: add more)
 (global-set-key (kbd "C-c e b") 'eval-buffer)
 
 (global-set-key (kbd "C-h C-f") 'find-function)

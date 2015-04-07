@@ -13,6 +13,16 @@
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
+;; fill
+(setq-default fill-column 80)
+;; The original value is "\f\\|[ \t]*$", so we add the bullets (-), (+), and (*).
+;; There is no need for "^" as the regexp is matched at the beginning of line.
+;; TODO: get this to work for comments.
+;;(setq paragraph-start "\f\\|[ \t]*$\\|[ \t]*[-+*] ")
+
+;; tasklist
+
+
 ;; TODO: enable this & make it global.
 ;; (use-hard-newlines 1 'never)
 
@@ -204,10 +214,18 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 ;; org-mode
 (setq org-log-done 'time)
-(setq org-directory "~/org")
+(setq org-directory "~/org/")
+
+;; tasklist
+(require 'tasklist)
+(setq tasklist-directory-name (expand-file-name "tasks" org-directory))
+(setq tasklist-auto-insert"* tasks
+** do
+** small
+** sessions")
 
 ;; remember
-(setq remember-data-file (concat org-directory "/notes.org"))
+(setq remember-data-file (expand-file-name "notes.org" org-directory))
 (setq remember-notes-initial-major-mode 'org-mode)
 (setq initial-buffer-choice 'remember-notes)
 
