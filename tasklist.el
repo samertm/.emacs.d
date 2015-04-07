@@ -56,16 +56,14 @@
   :type 'string
   :group 'tasklist)
 
-;; LATER: figure out git subtree (see man file).
-;; get the date, then open the tasklist.
+;;;###autoload
 (defun tasklist-open-tasklist (&optional time)
   "Open the tasklist for TIME, or today if omitted.
 Switch to a buffer visiting the tasklist, creating it if it
 doesn't exist.
 Creates directory `tasklist-directory-name' if it doesn't exist."
   (interactive)
-  (make-directory tasklist-directory-name t) ; Always attempt to
-                                             ; create directory.
+  (make-directory tasklist-directory-name t) ; Always attempt to create directory.
   (find-file (tasklist-file-path time))
   ;; If the file is new, insert `tasklist-auto-insert-string'.
   (when (string= (buffer-string) "")    ; FIXME: incorrect when narrowing is in effect.
