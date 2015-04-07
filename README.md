@@ -2,7 +2,7 @@
 
 Manage tasks. Call `tasklist-open-tasklist'.
 
-TODO: add examples, screenshots, configs.
+TODO: add examples, screenshots, configs, keybindings.
 
 # License
 
