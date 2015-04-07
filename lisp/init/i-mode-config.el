@@ -13,7 +13,11 @@
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
+;; TODO: enable this & make it global.
+;; (use-hard-newlines 1 'never)
+
 ;; shell-mode
+;; TODO: ask emacs-devel about this.
 (add-to-list 'display-buffer-alist '(".*shell.*" . ((display-buffer-same-window) . nil)))
 
 ;; whitespace
