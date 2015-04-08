@@ -1,4 +1,4 @@
-[![License GPL 3][badge-license]][LICENSE]
+![License GPL 3](https://img.shields.io/badge/license-GPL%203-green.svg)
 
 # tasklist.el
 
