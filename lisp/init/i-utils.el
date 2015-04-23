@@ -84,18 +84,6 @@ user."
   (interactive)
   (delete-indentation 1))
 
-(defun samer-generate-blog ()
-  "Generate my blog."
-  (interactive)
-  (setq samer-my-shell (start-process "to-blog" "*to blog*" "bash"))
-  (process-send-string samer-my-shell "ssh samertm\n")
-  (process-send-string samer-my-shell ". virtualenvs/pelican/bin/activate\n")
-  (process-send-string samer-my-shell "cd /home/samer/pelican\n")
-  (process-send-string samer-my-shell "make html\n")
-  (process-send-string samer-my-shell "exit\n")
-  (process-send-string samer-my-shell "exit\n")
-  (display-buffer "*to blog*" '(display-buffer-pop-up-window . nil)))
-
 (defun src-start-work ()
   "Open up processes needed for work."
   (interactive)

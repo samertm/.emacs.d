@@ -20,7 +20,11 @@
 (global-set-key (kbd "C-x O") 'samer-previous-window)
 (global-set-key (kbd "C-x k") 'samer-kill-this-buffer)
 (global-set-key (kbd "C-^") 'samer-top-join-line)
-(global-set-key (kbd "C-c b") 'samer-generate-blog)
+
+;; Org-mode bindings
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (global-set-key (kbd "C-c t") 'tasklist-open-tasklist)
 
@@ -31,8 +35,6 @@
 
 (global-set-key (kbd "C-x o") 'other-window)
 (global-set-key (kbd "C-c o") 'ace-window)
-
-(global-set-key (kbd "C-c c") 'remember)
 
 (global-set-key (kbd "C-x C-1") 'delete-other-windows)
 (global-set-key (kbd "C-x C-2") 'split-window-below)
