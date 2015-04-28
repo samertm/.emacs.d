@@ -13,9 +13,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (request gh ace-window debbugs vala-mode cider clojure-mode sourcegraph markdown-mode deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags)))
- '(user-full-name "Samer Masterson")
- '(user-mail-address "samer@samertm.com"))
+    (racket-mode ace-window nm notmuch deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags)))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.mailbox.org")
+ '(smtpmail-smtp-service 25))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

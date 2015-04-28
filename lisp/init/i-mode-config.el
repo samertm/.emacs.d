@@ -14,7 +14,7 @@
               major-mode 'text-mode)
 
 ;; fill
-(setq-default fill-column 80)
+;;(setq fill-column 80)
 ;; The original value is "\f\\|[ \t]*$", so we add the bullets (-), (+), and (*).
 ;; There is no need for "^" as the regexp is matched at the beginning of line.
 ;; TODO: get this to work for comments.
@@ -623,6 +623,9 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
 ** do
 ** small
 ** sessions")
+
+;; magit
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; show-paren-mode
 (setq show-paren-delay 0)

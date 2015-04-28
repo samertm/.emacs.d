@@ -6,4 +6,4 @@
 	url = git@github.com:samertm/tasklist.el
 [submodule "lisp/fi"]
 	path = lisp/fi
-	url = git@github.com:samertm/fi.el
+	url = samertm:lisp/fi
