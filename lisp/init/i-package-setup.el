@@ -43,6 +43,7 @@
                  magit
                  ace-jump-mode
                  deft
+                 ace-window
                  ))
 
 ;; hotfix
