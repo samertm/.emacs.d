@@ -1,9 +1,3 @@
-[submodule "lisp/go-stacktracer"]
-	path = lisp/go-stacktracer
-	url = git@github.com:samertm/go-stacktracer.el
-[submodule "lisp/tasklist"]
-	path = lisp/tasklist
-	url = git@github.com:samertm/tasklist.el
 [submodule "lisp/fi"]
 	path = lisp/fi
 	url = samertm:lisp/fi
