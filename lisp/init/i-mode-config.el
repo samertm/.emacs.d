@@ -617,7 +617,7 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
       next-headline)))
 
 ;; tasklist
-(require 'tasklist)
+(require 'tasklist nil t) ;; no error
 (setq tasklist-directory-name (expand-file-name "tasks" org-directory))
 (setq tasklist-auto-insert"* tasks
 ** do
