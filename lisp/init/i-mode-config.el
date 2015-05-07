@@ -13,6 +13,17 @@
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
+;; mail
+
+;; not working
+;; (setq send-mail-function    'smtpmail-send-it
+;;       smtpmail-smtp-server  "smtp.mailbox.org"
+;;       smtpmail-stream-type  'starttls
+;;       smtpmail-smtp-service 587)
+
+;; nm (nevermore email client)
+(require 'nm-company)
+
 ;; fill
 ;;(setq fill-column 80)
 ;; The original value is "\f\\|[ \t]*$", so we add the bullets (-), (+), and (*).
@@ -219,6 +230,16 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (setq org-agenda-files '("~/org/planner.org"))
 (setq org-default-notes-file "~/org/refile.org")
 (setq initial-buffer-choice "~/org/notes.org")
+(setq org-todo-keywords '("TODO(t)" "NEXT(n)" "SOMEDAY(s)" "WAITING(w)" "DONE(d)"))
+(setq org-todo-keyword-faces
+      '(("TODO" :foreground "red" :weight bold)
+        ("NEXT" :foreground "blue" :weight bold)
+        ("DONE" :foreground "forest green" :weight bold)
+        ("WAITING" :foreground "orange" :weight bold)
+        ("SOMEDAY" :foreground "magenta" :weight bold)))
+(setq org-refile-targets '((org-agenda-files . (:maxlevel . 3))
+                           ("~/org/notes.org" . (:maxlevel . 3))))
+(setq org-completion-use-ido t)
 
 ;; tasklist
 (require 'tasklist nil t) ;; no error

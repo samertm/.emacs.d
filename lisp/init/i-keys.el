@@ -25,6 +25,8 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c C-o")
+                (lambda () (interactive) (find-file "~/org/planner.org")))
 
 (global-set-key (kbd "C-c t") 'tasklist-open-tasklist)
 
