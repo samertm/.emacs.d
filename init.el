@@ -23,8 +23,8 @@
 (column-number-mode t)
 
 ;; For chromebook
-(if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
-    (set-face-attribute 'default nil :height 130))
+;;(if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
+(set-face-attribute 'default nil :height 100)
 
 ;; Add Lisp dir to loadpath.
 (defvar my-lisp-dir (expand-file-name "lisp" user-emacs-directory)
@@ -47,3 +47,4 @@
 (require 'i-custom)
 
 ;;; init.el ends here
+(put 'downcase-region 'disabled nil)

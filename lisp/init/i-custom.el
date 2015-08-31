@@ -11,9 +11,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/org/aaaa" "~/org/planner.org")))
  '(package-selected-packages
    (quote
-    (debbugs racket-mode ace-window nm notmuch deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags)))
+    (js-comint web-mode php-mode json-mode company-ycmd company-ycm ycmd wacspace dockerfile-mode jade-mode nm smex projectile magit guide-key go-eldoc flycheck flx-ido deft ctags company-go ag ace-window ace-jump-mode)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-service 25))

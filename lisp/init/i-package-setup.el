@@ -44,6 +44,8 @@
                  ace-jump-mode
                  deft
                  ace-window
+                 nm
+                 web-mode
                  ))
 
 ;; hotfix

@@ -13,6 +13,12 @@
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
+;; web-mode
+;; SAMER: Lazy load web-mode?
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+
 ;; mail
 
 ;; not working
@@ -285,6 +291,9 @@ If REGEXP is non-nil, treat STRING as a regular expression."
       backup-directory-alist `(("." . ,(concat user-emacs-directory
 					       "backups"))))
 
+;; js-mode
+(setq js-indent-level 2)
+
 ;; Set up hooks.
 
 (defun my-prog-mode-hook ()
@@ -293,9 +302,6 @@ If REGEXP is non-nil, treat STRING as a regular expression."
   (local-set-key (kbd "C-a") 'back-to-indentation)
   (local-set-key (kbd "M-m") 'move-beginning-of-line)
   (setq show-trailing-whitespace t))
-
-(defun my-js-mode-hook ()
-  (setq js-indent-level 2))
 
 (defun my-c-mode-hook ()
   (c-set-style "linux")
