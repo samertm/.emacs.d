@@ -21,6 +21,21 @@
 (global-set-key (kbd "C-x k") 'samer-kill-this-buffer)
 (global-set-key (kbd "C-^") 'samer-top-join-line)
 
+;; helm bindings
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
+(global-set-key (kbd "C-x f") 'helm-find-files)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to do persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x b") 'helm-mini)
+
+
 ;; Org-mode bindings
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
@@ -77,7 +92,8 @@
 (global-set-key (kbd "C-c M-n") 'company-complete)
 (global-set-key (kbd "C-c C-n") 'company-complete)
 
-(global-set-key (kbd "M-x") 'smex)
+;(global-set-key (kbd "M-x") 'smex)
+;; TODO: Find the equivalent w/ helm.
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)

@@ -46,23 +46,24 @@
                  ace-window
                  nm
                  web-mode
+                 exec-path-from-shell
                  ))
 
 ;; hotfix
 
-(if (functionp 'package--mapc)
-    (progn
-      (defun package-read-all-archive-contents ()
-        "Re-read `archive-contents', if it exists.
-If successful, set `package-archive-contents'."
-        (setq package-archive-contents nil)
-        (dolist (archive package-archives)
-          (package-read-archive-contents (car archive)))
-        ;; Build compat table.
-        (if package--initialized
-            (progn
-              (setq package--compatibility-table (make-hash-table :test 'eq))
-              (package--mapc #'package--add-to-compatibility-table))))))
+;; (if (functionp 'package--mapc)
+;;     (progn
+;;       (defun package-read-all-archive-contents ()
+;;         "Re-read `archive-contents', if it exists.
+;; If successful, set `package-archive-contents'."
+;;         (setq package-archive-contents nil)
+;;         (dolist (archive package-archives)
+;;           (package-read-archive-contents (car archive)))
+;;         ;; Build compat table.
+;;         (if package--initialized
+;;             (progn
+;;               (setq package--compatibility-table (make-hash-table :test 'eq))
+;;               (package--mapc #'package--add-to-compatibility-table))))))
 
 
 ;; NOTE: after 25.0 this may not be needed.

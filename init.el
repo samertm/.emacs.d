@@ -24,7 +24,29 @@
 
 ;; For chromebook
 ;;(if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 160)
+
+
+(defun samer-mac-kinesis-keybindings ()
+  "Set keybindings for the Kinesis keyboard on OS X."
+  (interactive)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'meta)
+  (global-set-key [kp-delete] 'delete-char))
+
+(defun samer-mac-std-keybindings ()
+  "Set keybindings for the standard Mac keyboard."
+  (interactive)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'control)
+  (global-set-key [kp-delete] 'delete-char))
+
+(when (memq window-system '(mac ns))
+  (samer-mac-kinesis-keybindings)
+  (exec-path-from-shell-initialize)
+  ;; Temporary hack. Need to write `exec-path-from-shell-copy-all-envs'.
+  (exec-path-from-shell-copy-env "EDITOR")
+  (exec-path-from-shell-copy-env "PYTHONPATH"))
 
 ;; Add Lisp dir to loadpath.
 (defvar my-lisp-dir (expand-file-name "lisp" user-emacs-directory)
