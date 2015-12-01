@@ -26,6 +26,9 @@
 ;;(if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
 (set-face-attribute 'default nil :height 160)
 
+;; Frrom githujb.com/lewang/flx
+(setq gc-cons-threshold 20000000)
+
 
 (defun samer-mac-kinesis-keybindings ()
   "Set keybindings for the Kinesis keyboard on OS X."

@@ -41,6 +41,9 @@
                  company-go
                  smex
                  magit
+                 helm
+                 elpy
+                 php-mode
                  ace-jump-mode
                  deft
                  ace-window

@@ -13,6 +13,9 @@
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
+;; elpy
+(elpy-enable)
+
 ;; helm
 
 (require 'helm)
@@ -363,6 +366,10 @@ If REGEXP is non-nil, treat STRING as a regular expression."
   (company-mode 1)
   (set (make-local-variable 'company-backends) '(company-go)))
 
+(defun my-php-mode-hook ()
+  (setq c-basic-offset 4)
+  (php-enable-pear-coding-style))
+
 (add-hook 'prog-mode-hook 'my-prog-mode-hook)
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
@@ -375,6 +382,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 (add-hook 'javascript-mode-hook 'my-javascript-mode-hook)
 (add-hook 'text-mode-hook 'visual-line-mode)
+(add-hook 'php-mode-hook 'my-php-mode-hook)
 
 (provide 'i-mode-config)
 ;;; i-mode-config.el ends here
