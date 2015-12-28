@@ -322,7 +322,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 					       "backups"))))
 
 ;; js-mode
-(setq js-indent-level 4)
+(setq js-indent-level 2)
 
 ;; Set up hooks.
 
