@@ -20,6 +20,7 @@
  '(package-selected-packages
    (quote
     (elpy company-jedi jedi tabula-rasa tango-plus-theme leuven-theme moe-theme color-theme-sanityinc-tomorrow markdown-mode anaconda-mode coffee-mode exec-path-from-shell web-mode nm ace-window deft ace-jump-mode magit smex company-go company go-eldoc ag guide-key flycheck flx-ido projectile popwin go-mode ctags)))
+ '(projectile-require-project-root nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote

@@ -15,6 +15,10 @@
 
 ;; custom functions
 
+(defun samer-insert-pwd ()
+  (interactive)
+  (insert default-directory))
+
 ;; From http://www.emacswiki.org/emacs/RevertBuffer
 (defun samer-revert-all-buffers ()
   "Refreshes all open buffers from their respective files."

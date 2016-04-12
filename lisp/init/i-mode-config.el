@@ -215,7 +215,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 (add-to-list 'load-path (concat (getenv "GOPATH") "/src/github.com/dougm/goflymake"))
 
 ;; flycheck-mode
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; go-eldoc
 (require 'go-eldoc)
