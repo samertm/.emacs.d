@@ -10,6 +10,7 @@
 ;; major modes
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
