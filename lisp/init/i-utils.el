@@ -15,6 +15,10 @@
 
 ;; custom functions
 
+(defun samer-insert-file-name ()
+  (interactive)
+  (insert buffer-file-name))
+
 (defun samer-insert-pwd ()
   (interactive)
   (insert default-directory))
