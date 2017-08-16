@@ -73,7 +73,7 @@ Creates directory `tasklist-directory-name' if it doesn't exist."
   "Return absolute file path for the tasklist at TIME.
 If TIME is nil, return the file path for today."
   (expand-file-name
-   (concat (format-time-string "%m-%d-%Y" (if time time))
+   (concat (format-time-string "%Y-%m-%d" (if time time))
            tasklist-file-suffix)
    tasklist-directory-name))
 

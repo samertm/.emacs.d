@@ -11,6 +11,9 @@
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.bzl\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("BUILD\\'" . python-mode))
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
@@ -158,6 +161,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
           (setq command-string
                 (read-from-minibuffer "ag command: "
                                       (cons command-string adjusted-point)))))
+      (setq command-string (concat command-string " | awk -v len=1000 '{ if (length($0) > len) print substr($0, 1, len-3) \"...\"; else print; }'"))
       ;; Call ag.
       (compilation-start
        command-string
@@ -167,7 +171,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 ;; ag
 (setq ag-reuse-buffers t)
-(setq ag-ignore-list '("Godeps" "assets" "node_modules" "bower_components" "testdata"))
+(setq ag-ignore-list '("Godeps" "assets" "node_modules" "bower_components" "testdata" "*.map" "*min.js"))
 
 ;; scroll
 (setq scroll-preserve-screen-position t)
@@ -352,7 +356,11 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 (defun my-python-mode-hook ()
   (local-set-key (kbd "<RET>") 'newline-and-indent)
-  (local-set-key (kbd "C-j") 'newline))
+  (local-set-key (kbd "C-j") 'newline)
+  ;; (when (or (string= (file-name-extension buffer-file-name) "bzl")
+  ;;           (string= buffer-file-name "BUILD"))
+  ;;   (setq python-indent 2))
+  )
 
 (defun my-scheme-mode-hook ()
   ;(enable-paredit-mode))
