@@ -21,6 +21,8 @@
 (global-set-key (kbd "C-x k") 'samer-kill-this-buffer)
 (global-set-key (kbd "C-^") 'samer-top-join-line)
 
+(global-set-key (kbd "<C-M-backspace>") 'kill-whole-line)
+
 ;; helm bindings
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
