@@ -12,6 +12,7 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.bzl\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("BUILD\\'" . python-mode))
 (setq-default indent-tabs-mode nil
@@ -134,6 +135,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
   (let ((default-directory (file-name-as-directory directory))
         (arguments ag-arguments)
         (shell-command-switch "-c"))
+    (setq arguments (append '("--noheading" "--nobreak") arguments))
     (unless regexp
         (setq arguments (cons "--literal" arguments)))
     (if ag-highlight-search
