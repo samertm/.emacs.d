@@ -28,7 +28,6 @@
 
 ;; install packages
 (setq packages '(
-                 ctags
                  go-mode
                  popwin
                  projectile

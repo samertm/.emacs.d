@@ -15,6 +15,7 @@
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.bzl\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("BUILD\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.pyst\\'" . python-mode))
 (setq-default indent-tabs-mode nil
               major-mode 'text-mode)
 
@@ -305,10 +306,6 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 ;; set electric-indent-mode in <= emacs 24.3
 ; (electric-indent-mode 1)
-
-;; ctags
-(require 'ctags)
-(setq tags-revert-without-query t)
 
 ;; misc config
 (fmakunbound 'suspend-frame)
