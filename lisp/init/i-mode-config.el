@@ -294,7 +294,10 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 ** sessions")
 
 ;; magit
+(require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
+(setq magit-revision-insert-related-refs nil)
+
 
 ;; show-paren-mode
 (setq show-paren-delay 0)
