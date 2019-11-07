@@ -9,7 +9,7 @@
 ;; set up modes
 ;; major modes
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . javascript-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . html-mode))
