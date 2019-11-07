@@ -9,7 +9,7 @@
 ;; set up modes
 ;; major modes
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . javascript-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . html-mode))
@@ -330,6 +330,7 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 
 ;; js-mode
 (setq js-indent-level 2)
+(setq js2-basic-offset 2)
 
 ;; Set up hooks.
 

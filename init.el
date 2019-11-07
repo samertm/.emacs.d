@@ -24,7 +24,7 @@
 
 ;; For chromebook
 ;;(if (equal system-configuration "armv7l-unknown-linux-gnueabihf")
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 120)
 
 ;; Frrom githujb.com/lewang/flx
 (setq gc-cons-threshold 20000000)
