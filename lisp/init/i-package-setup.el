@@ -49,6 +49,7 @@
                  nm
                  web-mode
                  exec-path-from-shell
+                 rjsx-mode
                  ))
 
 ;; hotfix
