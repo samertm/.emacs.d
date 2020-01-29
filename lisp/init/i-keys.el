@@ -141,8 +141,8 @@
 (global-set-key (kbd "C-M-z") 'zap-to-char)
 
 ;; ctags
-(global-set-key (kbd "<f7>") 'ctags-create-or-update-tags-table)
-(global-set-key (kbd "M-.")  'ctags-search)
+;;(global-set-key (kbd "<f7>") 'ctags-create-or-update-tags-table)
+;;(global-set-key (kbd "M-.")  'ctags-search)
 
 (if (< emacs-major-version 24)
     (global-set-key (kbd "RET") 'newline-and-indent)) ; in place of electric-indent
