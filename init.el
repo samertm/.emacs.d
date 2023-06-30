@@ -44,13 +44,6 @@
   (setq mac-option-modifier 'control)
   (global-set-key [kp-delete] 'delete-char))
 
-(when (memq window-system '(mac ns))
-  (samer-mac-kinesis-keybindings)
-  (exec-path-from-shell-initialize)
-  ;; Temporary hack. Need to write `exec-path-from-shell-copy-all-envs'.
-  (exec-path-from-shell-copy-env "EDITOR")
-  (exec-path-from-shell-copy-env "PYTHONPATH"))
-
 ;; Add Lisp dir to loadpath.
 (defvar my-lisp-dir (expand-file-name "lisp" user-emacs-directory)
   "The directory with all of my custom Lisp files.")
@@ -70,6 +63,15 @@
 (require 'i-mode-config)
 (require 'i-keys)
 (require 'i-custom)
+
+(when (memq window-system '(mac ns))
+  (samer-mac-std-keybindings)
+  (exec-path-from-shell-initialize)
+  ;; Temporary hack. Need to write `exec-path-from-shell-copy-all-envs'.
+  (exec-path-from-shell-copy-env "EDITOR")
+  (exec-path-from-shell-copy-env "PYTHONPATH")
+  (exec-path-from-shell-copy-env "GOPATH")
+)
 
 ;;; init.el ends here
 (put 'downcase-region 'disabled nil)

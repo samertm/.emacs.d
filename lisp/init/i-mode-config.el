@@ -202,6 +202,9 @@ If REGEXP is non-nil, treat STRING as a regular expression."
 ;; go-eldoc
 (require 'go-eldoc)
 
+;; python
+(setq python-fill-docstring-style 'symmetric)
+
 ;; company-mode
 (setq company-idle-delay nil)
 
