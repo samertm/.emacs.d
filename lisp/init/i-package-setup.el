@@ -28,28 +28,24 @@
 
 ;; install packages
 (setq packages '(
-                 go-mode
-                 popwin
-                 projectile
-                 flx-ido
-                 flycheck
-                 guide-key
+                 ace-jump-mode
+                 ace-window
                  ag
                  go-eldoc
                  company
                  company-go
-                 smex
-                 magit
+                 elpy
+                 exec-path-from-shell
+                 flx-ido
+                 flycheck
+                 go-eldoc
+                 go-mode
                  helm
                  helm-projectile
-                 elpy
+                 magit
                  php-mode
-                 ace-jump-mode
-                 deft
-                 ace-window
-                 nm
-                 web-mode
-                 exec-path-from-shell
+                 popwin
+                 projectile
                  rjsx-mode
                  ))
 
