@@ -6,6 +6,12 @@
 
 ;;; Code:
 
+;; (global-set-key (kbd "C-c i") 'clang-include-fixer-at-point)
+(global-set-key (kbd "C-c e") 'samer-flymake-error-at-point)
+(global-set-key (kbd "C-c f") 'eglot-code-action-quickfix)
+(global-set-key (kbd "C-c w") 'flymake-goto-next-error)
+;; C-M-q is clang-format for the selected region.
+
 ;; unset keys
 ;; unset news keys (guilty as charged, I am the fat-fingered man.)
 (global-unset-key (kbd "C-h C-n"))
@@ -20,8 +26,12 @@
 (global-set-key (kbd "C-x O") 'samer-previous-window)
 (global-set-key (kbd "C-x k") 'samer-kill-this-buffer)
 (global-set-key (kbd "C-^") 'samer-top-join-line)
+(global-set-key (kbd "C-c b") 'revert-buffer)
+(global-set-key (kbd "C-c C-b") 'samer-revert-all-buffers)
 
-(global-set-key (kbd "<C-M-backspace>") 'kill-whole-line)
+(global-set-key (kbd "<C-\M-backspace>") 'kill-whole-line)
+(global-set-key (kbd "C-|") 'kill-whole-line)
+(global-set-key (kbd "C-\\") 'kill-whole-line)
 
 ;; helm bindings
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
@@ -40,7 +50,6 @@
 
 ;; Org-mode bindings
 (global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c C-o")
                 (lambda () (interactive) (find-file "~/org/planner.org")))
@@ -48,8 +57,6 @@
 (global-set-key (kbd "C-c t") 'tasklist-open-tasklist)
 
 ;; Eval keybindings (TODO: add more)
-(global-set-key (kbd "C-c e b") 'eval-buffer)
-
 (global-set-key (kbd "C-h C-f") 'find-function)
 
 (global-set-key (kbd "C-x o") 'other-window)
@@ -68,8 +75,8 @@
 
 (global-set-key (kbd "C-c C-M-x") 'edebug-defun)
 
-(global-set-key (kbd "C-c u") 'samer-subword-mode-on)
-(global-set-key (kbd "C-c i") 'samer-superword-mode-on)
+;;(global-set-key (kbd "C-c u") 'samer-subword-mode-on)
+;;(global-set-key (kbd "C-c i") 'samer-superword-mode-on)
 
 ;; so fat
 (global-set-key (kbd "C-c x C-o") 'other-frame)
@@ -94,13 +101,8 @@
 (global-set-key (kbd "C-c M-n") 'company-complete)
 (global-set-key (kbd "C-c C-n") 'company-complete)
 
-;(global-set-key (kbd "M-x") 'smex)
-;; TODO: Find the equivalent w/ helm.
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-(global-set-key (kbd "<f8>") 'deft)
 
 (global-set-key (kbd "C-c C-SPC") 'ace-jump-mode)
 
@@ -111,11 +113,10 @@
 (global-set-key (kbd "C-x M") 'samer-new-eshell)
 
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-c m") 'vterm)
+(global-set-key (kbd "C-c M") 'samer-new-vterm)
 
 (global-set-key (kbd "C-x C-d") 'ido-dired)
-
-(global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c a") 'org-agenda)
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 

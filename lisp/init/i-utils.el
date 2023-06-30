@@ -15,6 +15,17 @@
 
 ;; custom functions
 
+(defun samer-clear-refresh-helm-ff-cache ()
+  (interactive)
+  (clrhash helm-ff--list-directory-cache))
+
+;; Sometimes the company-capf will cache incorrect values for completions at
+;; certain points, e.g. if the eglot backend is down when company-capf runs.
+;; You'll need to clear the cache in those cases.
+(defun samer-clear-company-capf-cache ()
+  (interactive)
+  (setq company--capf-cache nil))
+
 (defun samer-insert-file-name ()
   (interactive)
   (insert buffer-file-name))
@@ -22,6 +33,16 @@
 (defun samer-insert-pwd ()
   (interactive)
   (insert default-directory))
+
+(defun samer-save-pwd ()
+  (interactive)
+  (kill-new default-directory)
+  (message "Saved to kill ring: %s" default-directory))
+
+(defun samer-save-file-name ()
+  (interactive)
+  (kill-new buffer-file-name)
+  (message "Saved to kill ring: %s" buffer-file-name))
 
 ;; From http://www.emacswiki.org/emacs/RevertBuffer
 (defun samer-revert-all-buffers ()
@@ -65,18 +86,37 @@
   (move-end-of-line nil)
   (setq deactivate-mark nil))
 
+(defun samer-sometimes-indent-according-to-mode ()
+  (unless (equal mode-name "Org")
+    (indent-according-to-mode)))
+
 (defun samer-vim-command-s-o ()
   (interactive)
   (move-beginning-of-line nil)
   (newline)
   (previous-line nil)
-  (indent-according-to-mode))
+  (samer-sometimes-indent-according-to-mode))
 
 (defun samer-vim-command-o ()
   (interactive)
   (move-end-of-line nil)
   (newline)
-  (indent-according-to-mode))
+  (samer-sometimes-indent-according-to-mode))
+
+(defun samer-flymake-error-at-point ()
+  (interactive)
+  (let ((buf (get-buffer-create "*samer-flymake-error*"))
+        (error-message (mapconcat #'flymake-diagnostic-text (flymake-diagnostics (point)) "\n")))
+    (if (and error-message (not (equal error-message "")))
+        (progn
+          (with-current-buffer buf
+            (let ((inhibit-read-only t))
+              (erase-buffer)
+              (setq buffer-read-only t)
+              (insert error-message))
+            (goto-char (point-min))
+            (popwin:popup-buffer (current-buffer))))
+      (message "No flymake error at point."))))
 
 (defun samer-find-file-as-root ()
   "Get file with root privileges.
@@ -101,6 +141,10 @@ user."
 (defun samer-new-eshell ()
   (interactive)
   (eshell t))
+
+(defun samer-new-vterm ()
+  (interactive)
+  (vterm t))
 
 (defun samer-top-join-line ()
   (interactive)
