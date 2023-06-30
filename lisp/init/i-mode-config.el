@@ -29,7 +29,6 @@
 ;; helm
 
 (require 'helm)
-(require 'helm-config)
 ; (helm-mode 0)
 (when (executable-find "curl")
   (setq helm-google-suggest-use-curl-p t))
