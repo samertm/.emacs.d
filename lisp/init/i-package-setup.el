@@ -41,6 +41,7 @@
                  smex
                  magit
                  helm
+                 helm-projectile
                  elpy
                  php-mode
                  ace-jump-mode
