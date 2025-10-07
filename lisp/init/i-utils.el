@@ -15,6 +15,16 @@
 
 ;; custom functions
 
+(defun samer-navigate-to-file-from-magit-buffer ()
+  "Parse the buffer name and open the associated file in the current directory."
+  (interactive)
+  (let* ((buffer-name (buffer-name))
+         (match (string-match "\\([^/]+\\)\\.~[^~]+~$" buffer-name)))
+    (if match
+        (let ((filename (match-string 1 buffer-name)))
+          (find-file filename))
+      (message "Buffer name doesn't match the expected format."))))
+
 (defun samer-clear-refresh-helm-ff-cache ()
   (interactive)
   (clrhash helm-ff--list-directory-cache))

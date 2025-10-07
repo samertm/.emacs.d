@@ -65,7 +65,7 @@
 (require 'i-custom)
 
 (when (memq window-system '(mac ns))
-  (samer-mac-std-keybindings)
+  (samer-mac-kinesis-keybindings)
   (exec-path-from-shell-initialize)
   ;; Temporary hack. Need to write `exec-path-from-shell-copy-all-envs'.
   (exec-path-from-shell-copy-env "EDITOR")
