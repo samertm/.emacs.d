@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+o",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+o",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus"
+    }
+]

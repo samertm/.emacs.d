@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Default Light+",
+    "editor.find.seedSearchStringFromSelection": "never",
+    "python.defaultInterpreterPath": "/Users/samer/src/backend/.venv"
+}

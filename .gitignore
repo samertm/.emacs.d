@@ -5,3 +5,5 @@ subdirs (see /lisp/.gitignore).
 !/init.el
 !/lisp
 !/lisp/*
+!/cursorsettings/
+!/cursorsettings/*
